@@ -1,1 +1,63 @@
+.top-container {
+  background-color: #b8b5ff;
+  height: 200px;
+  width: 200px;
+  border: solid 10px;
+  border-color: black;
+  padding: 20px;
+}
 
+.bottom-container {
+  background-color: #7868e6;
+  height: 200px;
+  width: 200px;
+  border: solid 20px;
+  border-color: black;
+  margin-left: 260px;
+}
+
+.box1 {
+  background-color: orange;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  left: 200px;
+}
+.box2 {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  right: 200px;
+}
+
+.diag-container {
+  background-color: gray;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+}
+.pink-box {
+  background-color: pink;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 50px;
+}
+
+.blue-box {
+  background-color: cyan;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 50px;
+}
+
+/* Block (display) elements are things like headings, paragrach, lists */
+/* Inline (display) elements are spans, images, anchors.  Can't affect width */
+/* inline-block (display) has characteristics of both*/
+/* display: none gets rid of element (visibility hidden takes up html space)*/
+/* relative positioning is relative to where the element "would" have been;
+   it doesn't affect the positions of others around it */
