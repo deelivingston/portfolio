@@ -1,3 +1,8 @@
+body {
+  font-family: sans-serif;
+  color: brown;
+}
+
 .top-container {
   background-color: #b8b5ff;
   height: 200px;
@@ -37,7 +42,6 @@
   background-color: gray;
   height: 300px;
   width: 300px;
-  position: absolute;
 }
 .pink-box {
   background-color: pink;
@@ -55,9 +59,28 @@
   left: 50px;
 }
 
+.image-container {
+  display: block;
+  width: 50%;
+  margin: 40px auto 40px auto;
+}
+.chilli-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
 /* Block (display) elements are things like headings, paragrach, lists */
 /* Inline (display) elements are spans, images, anchors.  Can't affect width */
 /* inline-block (display) has characteristics of both*/
 /* display: none gets rid of element (visibility hidden takes up html space)*/
 /* relative positioning is relative to where the element "would" have been;
    it doesn't affect the positions of others around it */
+/* text-align: center will center everything that does NOT have a width set */
+/* otherwise, if width is set, you can center with margin, e.g: 0 auto;
+/*
+Fonts: 16px == 100% == 1em
+em is relative to parent and rem is relative to root
+
+clear style is like the "anti-float", example: clear: left will clear a float: left
+don't overuse float, should only be used for wrapping text and NOT for positioning
