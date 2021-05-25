@@ -16,8 +16,42 @@ app.post("/", function(req, res) {
   var lastName = req.body.lastName;
   var email = req.body.email;
 
-  console.log(firstName + " " + lastName + " at " + email);
-  res.send("Post received");
+  // res.send("Post received");
+
+  var data = {
+    first: firstName,
+    last: lastName,
+    emailAddress: email,
+    status: "new",
+  };
+
+/*
+  const request = https.request("url", options, function(response) {
+    response.on("data", function(respData) {
+      console.log(JSON.parse(data));
+    });
+    request.write(jsonData);
+    request.end();
+  });
+  */
+
+  const jsonData = JSON.stringify(data);
+  console.log(jsonData);
+
+  var requestStatusCode = 200;
+  if (data.first != "Diane") {
+    requestStatusCode = 404;
+  }
+
+  if (requestStatusCode === 200) {
+      res.sendFile(__dirname + "/success.html");
+  } else {
+      res.sendFile(__dirname + "/failure.html");
+  }
+});
+
+app.post("/failure", function(req, resp) {
+  resp.redirect("/");
 });
 
 app.listen(3000, function () {
